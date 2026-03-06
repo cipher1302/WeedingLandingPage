@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import css from "./CountDown.module.css";
+import Reveal from "../Reveal/Reveal";
 
 const CountdownTimer = () => {
   const targetDate: Date = new Date("2026-05-05T00:00:00");
@@ -38,24 +39,26 @@ const CountdownTimer = () => {
   if (!timeLeft) return <p>Событие наступило! 🎉</p>;
 
   return (
-    <div className={css.countdown_wrapper}>
-      <div className={css.time_card}>
-        <span className={css.number}>{timeLeft.days}</span>
-        <span className={css.label}>Дней</span>
+    <Reveal>
+      <div className={css.countdown_wrapper}>
+        <div className={css.time_card}>
+          <span className={css.number}>{timeLeft.days}</span>
+          <span className={css.label}>Дней</span>
+        </div>
+        <div className={css.time_card}>
+          <span className={css.number}>{timeLeft.hours}</span>
+          <span className={css.label}>Часов</span>
+        </div>
+        <div className={css.time_card}>
+          <span className={css.number}>{timeLeft.minutes}</span>
+          <span className={css.label}>Минут</span>
+        </div>
+        <div className={css.time_card}>
+          <span className={css.number}>{timeLeft.seconds}</span>
+          <span className={css.label}>Секунд</span>
+        </div>
       </div>
-      <div className={css.time_card}>
-        <span className={css.number}>{timeLeft.hours}</span>
-        <span className={css.label}>Часов</span>
-      </div>
-      <div className={css.time_card}>
-        <span className={css.number}>{timeLeft.minutes}</span>
-        <span className={css.label}>Минут</span>
-      </div>
-      <div className={css.time_card}>
-        <span className={css.number}>{timeLeft.seconds}</span>
-        <span className={css.label}>Секунд</span>
-      </div>
-    </div>
+    </Reveal>
   );
 };
 

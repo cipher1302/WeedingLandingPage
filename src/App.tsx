@@ -1,4 +1,3 @@
-// import DateComponent from "./components/DateComponent/DateComponent";
 import DayPlan from "./components/DayPlan/DayPlan";
 import DressCodeComponent from "./components/DressCodeComponent/DressCodeComponent";
 import HeroComponent from "./components/HeroComponent/HeroComponent";
@@ -17,7 +16,6 @@ function App() {
       <DressCodeComponent />
       <CountDown />
       <FooterComponent />
-      {/* <DateComponent /> */}
     </>
   );
 }
