@@ -25,6 +25,7 @@ footer ul {
   align-items: center;
   gap: 15px;
   margin: 0;
+  flex-direction: column;
 }
 
 footer p {
