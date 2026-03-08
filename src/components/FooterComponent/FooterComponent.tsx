@@ -3,7 +3,7 @@ import styles from "./FooterComponent.module.css";
 import Reveal from "../Reveal/Reveal";
 
 const FooterComponent = () => {
-  const [open, isOpen] = useState<Boolean>(false);
+  const [open, isOpen] = useState<boolean>(false);
 
   const handleOpen = () => {
     isOpen(!open);
@@ -13,7 +13,7 @@ const FooterComponent = () => {
     <Reveal>
       <footer className={styles.footer}>
         <h2 className={styles.title}>
-          Хотите попасть на свадьбу? Пишите нам в Whatsapp!
+          Хотите разделить с нами радость этого дня? Напишите нам в WhatsApp!
         </h2>
         <p>Как оставить зявку?</p>
         <div className={styles.faqItem}>
