@@ -1,11 +1,19 @@
 .circle {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid #d3d3d3;
   transition: transform 0.2s ease;
+  box-sizing: border-box;
 }
 
 .circle:hover {
   transform: scale(1.05);
+}
+
+@media (min-width: 601px) {
+  .circle {
+    width: 50px;
+    height: 50px;
+  }
 }
